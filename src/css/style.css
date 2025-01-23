@@ -1,0 +1,223 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+body {
+  text-align: center;
+  background: #f4f4f9;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #333;
+  margin-right:90px
+}
+
+.carrossel {
+  position: relative;
+  margin: 0 auto;
+}
+
+.informacoes {
+  display: none;
+  border: 2px solid #ccc;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  align:center;
+}
+
+.informacoes.ativa {
+  display: block;
+}
+
+.conteudo {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.informacoes h1 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.informacoes .descricao {
+  width: 80%;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  height: auto;
+  overflow: auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-left: 110px;
+}
+
+.botoes-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-right:90px;
+ 
+}
+
+.botoes-carrossel .botao {
+  background-color: #ddd;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #bbb;
+  cursor: pointer;
+}
+
+.botoes-carrossel .botao-selecionado {
+  background-color: #007bff;
+  border-color: #0056b3;
+}
+
+.imagem {
+  width: 800px;
+  height: auto;
+  object-fit: contain;
+  display: none;
+  position: relative;
+  margin-left: 165px;
+}
+
+.imagem.ativa {
+  display: block;
+  animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main:after {
+  content: "";
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(120deg, rgb(46, 46, 45) 10%, rgba(0, 0, 0, 0.059) 50%, rgb(23, 22, 31) 90%);
+  z-index: -1;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .conteudo {
+    max-width: 90%;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .informacoes {
+    border-radius: 8px;
+    padding: 15px;
+  }
+
+  .informacoes h1 {
+    font-size: 1.5rem;
+  }
+
+  .informacoes .descricao {
+    font-size: 0.9rem;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .botoes-carrossel {
+    gap: 8px;
+  }
+
+  .botao {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .conteudo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .informacoes {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .informacoes h1 {
+    font-size: 1.25rem;
+  }
+
+  .informacoes .descricao {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .botoes-carrossel {
+    gap: 6px;
+  }
+
+  .botao {
+    width: 10px;
+    height: 10px;
+  }
+}

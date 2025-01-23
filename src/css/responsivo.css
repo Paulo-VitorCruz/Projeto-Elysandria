@@ -1,0 +1,65 @@
+@media (max-width: 768px) {
+  .conteudo {
+    max-width: 90%;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .carrossel {
+    height: 40vh;
+  }
+
+  .informacoes h1 {
+    font-size: 1.5rem;
+  }
+
+  .informacoes .descricao {
+    font-size: 0.9rem;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .botoes-carrossel {
+    gap: 8px;
+  }
+
+  .botao {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .conteudo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carrossel {
+    height: 35vh;
+  }
+
+  .informacoes {
+    padding: 10px;
+  }
+
+  .informacoes h1 {
+    font-size: 1.25rem;
+  }
+
+  .informacoes .descricao {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .botoes-carrossel {
+    gap: 6px;
+  }
+
+  .botao {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+  
